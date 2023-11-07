@@ -48,8 +48,6 @@ public class ControllerOfCourse implements InterfaceOfCourseController {
     @Autowired
     ServiceOfLearningObjective serviceOfLearningObjective;
 
-
-
     @Autowired
     ServiceOfImage serviceOfImage;
 
@@ -297,6 +295,11 @@ public class ControllerOfCourse implements InterfaceOfCourseController {
     public List<ResponeCourseDTO> displayIsNotApprovedCourses() {
         List<Course> courseList = courseRepository.displayIsNotApprovedCourses();
         return courseService.fromCourseListToResponeCourseDTOList(courseList);
+    }
+
+    @Override
+    public String testConnection() {
+        return "Welcome to ArtHub!";
     }
 
     public ResponeCourseDTO showSectionAndVideo(@RequestParam int id) {

@@ -22,6 +22,10 @@ public interface InterfaceOfCourseController {
     @GetMapping("/displayIsNotApprovedCourses")
     List<ResponeCourseDTO> displayIsNotApprovedCourses();
 
+
+    @GetMapping("/testConnection")
+    String testConnection();
+
     @PostMapping("/showSectionAndVideo")
     ResponeCourseDTO showSectionAndVideo(@RequestParam int id) throws IOException;
 
